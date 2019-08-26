@@ -1,0 +1,36 @@
+<idea-plugin>
+  <id>com.envy.plugin</id>
+  <name>WorstMybatisGenerator</name>
+  <version>1.6</version>
+  <vendor email="554617670@qq.com" url="http://www.shadowcompany.com">暂无</vendor>
+
+  <description><![CDATA[
+      May be the worst mybatis generator.<br>
+      <em>Mybatis Generator</em><br>
+      Entrance: Code > MybatisGenerator<br>
+      1. You can use your own ftl template to generate custom code<br>
+      Temp select button choose your own ftl<br>
+      2. Contains 3 Default ftl<br>
+      (1) DO<br>
+      (2) Mapper<br>
+      (3) Mapper.xml<br>
+    ]]></description>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="145.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.java</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="MybatisGenerator" class="com.envy.plugin.ui.MybatisGeneratorAction" text="MybatisGenerator">
+      <add-to-group group-id="CodeMenu" anchor="first"/>
+    </action>
+  </actions>
+</idea-plugin>
